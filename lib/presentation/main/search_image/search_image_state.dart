@@ -6,7 +6,7 @@ part 'search_image_state.freezed.dart';
 
 @freezed
 class SearchState with _$SearchState {
-  final List<Image> images;
+  final List<Images> images;
   final bool isLoading;
 
   const SearchState({this.images = const [], this.isLoading = false});

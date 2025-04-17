@@ -15,7 +15,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$SearchState {
 
- List<Image> get images; bool get isLoading;
+ List<Images> get images; bool get isLoading;
 /// Create a copy of SearchState
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -46,7 +46,7 @@ abstract mixin class $SearchStateCopyWith<$Res>  {
   factory $SearchStateCopyWith(SearchState value, $Res Function(SearchState) _then) = _$SearchStateCopyWithImpl;
 @useResult
 $Res call({
- List<Image> images, bool isLoading
+ List<Images> images, bool isLoading
 });
 
 
@@ -66,7 +66,7 @@ class _$SearchStateCopyWithImpl<$Res>
 @pragma('vm:prefer-inline') @override $Res call({Object? images = null,Object? isLoading = null,}) {
   return _then(SearchState(
 images: null == images ? _self.images : images // ignore: cast_nullable_to_non_nullable
-as List<Image>,isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
+as List<Images>,isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
 as bool,
   ));
 }

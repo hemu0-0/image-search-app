@@ -24,21 +24,22 @@ class DetailScreen extends StatelessWidget {
                 height: 250,
               ),
             ),
+            const SizedBox(height: 24),
             const Divider(height: 24, thickness: 1),
-            const SizedBox(height: 20),
+            const SizedBox(height: 24),
             Text(
-              ' Uploader: ${image.user}',
+              '업로더: ${image.user}',
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 24),
             const Divider(height: 24, thickness: 1),
+            const SizedBox(height: 12),
             const Text(
-              ' Tags',
+              ' 관련 태그',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 4),
             const Divider(height: 24, thickness: 1),
-            const SizedBox(height: 10),
             Wrap(
               spacing: 8,
               children:
