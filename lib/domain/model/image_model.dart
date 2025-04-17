@@ -1,22 +1,14 @@
-class Image {
+class Images {
   final String imageUrl;
   final String user;
   final List<String> tags;
 
-  Image({required this.imageUrl, required this.user, required this.tags});
-
-  Image copyWith({String? imageUrl, String? user, List<String>? tags}) {
-    return Image(
-      imageUrl: imageUrl ?? this.imageUrl,
-      user: user ?? this.user,
-      tags: tags ?? this.tags,
-    );
-  }
+  Images({required this.imageUrl, required this.user, required this.tags});
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is Image &&
+      other is Images &&
           runtimeType == other.runtimeType &&
           imageUrl == other.imageUrl &&
           user == other.user &&
@@ -27,6 +19,14 @@ class Image {
 
   @override
   String toString() {
-    return 'Image{imageUrl: $imageUrl, user: $user, tags: $tags}';
+    return 'Images{imageUrl: $imageUrl, user: $user, tags: $tags}';
+  }
+
+  Images copyWith({String? imageUrl, String? user, List<String>? tags}) {
+    return Images(
+      imageUrl: imageUrl ?? this.imageUrl,
+      user: user ?? this.user,
+      tags: tags ?? this.tags,
+    );
   }
 }
