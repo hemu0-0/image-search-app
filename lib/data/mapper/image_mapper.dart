@@ -4,7 +4,7 @@ import '../dto/image_dto.dart';
 extension ImageMapper on ImageDto {
   Image toDomain() {
     return Image(
-      imageUrl: pageUrl ?? '',
+      imageUrl: userImageUrl ?? '',
       user: user ?? 'Unknown',
       tags: tags ?? [],
     );
