@@ -10,7 +10,7 @@ class ImageRepositoryImpl implements ImageRepository {
   ImageRepositoryImpl(this.dataSource);
 
   @override
-  Future<List<Images>> searchImages(String query) async {
+  Future<List<Image>> searchImages(String query) async {
     final images = await dataSource.searchImages(query);
     return images.map((image) => image.toDomain()).toList();
   }

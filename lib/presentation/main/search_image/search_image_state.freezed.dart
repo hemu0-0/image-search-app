@@ -12,58 +12,47 @@ part of 'search_image_state.dart';
 
 // dart format off
 T _$identity<T>(T value) => value;
-
 /// @nodoc
 mixin _$SearchState {
 
-  List<Images> get images;
-
-  bool get isLoading;
-
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @pragma('vm:prefer-inline')
-  $SearchStateCopyWith<SearchState> get copyWith =>
-      _$SearchStateCopyWithImpl<SearchState>(this as SearchState, _$identity);
+ List<Image> get images; bool get isLoading;
+/// Create a copy of SearchState
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$SearchStateCopyWith<SearchState> get copyWith => _$SearchStateCopyWithImpl<SearchState>(this as SearchState, _$identity);
 
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is SearchState &&
-            const DeepCollectionEquality().equals(other.images, images) &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading));
-  }
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is SearchState&&const DeepCollectionEquality().equals(other.images, images)&&(identical(other.isLoading, isLoading) || other.isLoading == isLoading));
+}
 
 
-  @override
-  int get hashCode =>
-      Object.hash(
-          runtimeType, const DeepCollectionEquality().hash(images), isLoading);
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(images),isLoading);
 
-  @override
-  String toString() {
-    return 'SearchState(images: $images, isLoading: $isLoading)';
-  }
+@override
+String toString() {
+  return 'SearchState(images: $images, isLoading: $isLoading)';
+}
 
 
 }
 
 /// @nodoc
-abstract mixin class $SearchStateCopyWith<$Res> {
-  factory $SearchStateCopyWith(SearchState value,
-      $Res Function(SearchState) _then) = _$SearchStateCopyWithImpl;
+abstract mixin class $SearchStateCopyWith<$Res>  {
+  factory $SearchStateCopyWith(SearchState value, $Res Function(SearchState) _then) = _$SearchStateCopyWithImpl;
+@useResult
+$Res call({
+ List<Image> images, bool isLoading
+});
 
-  @useResult
-  $Res call({
-    List<Images> images, bool isLoading
-  });
+
 
 
 }
-
 /// @nodoc
 class _$SearchStateCopyWithImpl<$Res>
     implements $SearchStateCopyWith<$Res> {
@@ -72,22 +61,15 @@ class _$SearchStateCopyWithImpl<$Res>
   final SearchState _self;
   final $Res Function(SearchState) _then;
 
-  /// Create a copy of SearchState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? images = null, Object? isLoading = null,}) {
-    return _then(SearchState(
-      images: null == images
-          ? _self.images
-          : images // ignore: cast_nullable_to_non_nullable
-      as List<Images>,
-      isLoading: null == isLoading
-          ? _self.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-      as bool,
-    ));
-  }
+/// Create a copy of SearchState
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? images = null,Object? isLoading = null,}) {
+  return _then(SearchState(
+images: null == images ? _self.images : images // ignore: cast_nullable_to_non_nullable
+as List<Image>,isLoading: null == isLoading ? _self.isLoading : isLoading // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
 
 }
 
